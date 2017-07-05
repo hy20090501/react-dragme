@@ -9,6 +9,7 @@ import DragMe from './libs/drag';
 
 class App extends React.Component {
   render() {
+    const dragHandlers = {onStart: this.onStart, onStop: this.onStop};
     return (
         <Layout className="layout">
             <Header>
@@ -26,7 +27,9 @@ class App extends React.Component {
             </Header>
             <Content style={{ padding: '0 50px'}}>
                 <div style={{ background: '#fff', padding: 24, minHeight: 800 }}>
-                    <DragMe minHeight="800px">
+                    <DragMe minHeight="800px" {...dragHandlers}>
+                        <span>drag me  1..</span>
+                        <span>drag me  2..</span>
                     </DragMe>
                 </div>
             </Content>
