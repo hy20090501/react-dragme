@@ -1,4 +1,4 @@
-# Learn React & Webpack by building the Hacker News front page
+# a drag conponent about react 
 
 react 拖曳组件
 
