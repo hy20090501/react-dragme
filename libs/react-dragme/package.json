@@ -1,0 +1,22 @@
+{
+  "name": "react-dragme",
+  "version": "1.0.6",
+  "description": "a react component supporting elements' dragging",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "drag",
+    "react"
+  ],
+  "author": "hy",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
+  }
+}

@@ -10,4 +10,7 @@ cnpm install
 - 启动
 cnpm run dev
 
+- 访问
+http://localhost:8080/
+
   
