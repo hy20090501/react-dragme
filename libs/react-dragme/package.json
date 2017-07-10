@@ -1,6 +1,6 @@
 {
   "name": "react-dragme",
-  "version": "1.0.6",
+  "version": "1.0.10",
   "description": "a react component supporting elements' dragging",
   "main": "lib/index.js",
   "scripts": {
@@ -8,12 +8,17 @@
     "build": "babel src -d lib",
     "prepublish": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hy20090501/react-dragMe.git"
+  },
   "keywords": [
     "drag",
     "react"
   ],
   "author": "hy",
   "license": "ISC",
+  "homepage": "https://github.com/hy20090501/react-dragMe/tree/master/libs/react-dragme",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",

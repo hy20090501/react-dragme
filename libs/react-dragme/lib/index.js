@@ -41,6 +41,7 @@ var DragMe = function (_React$Component) {
         _this2.props.dragList.forEach(function (e) {
             var tempDragEle = _this.state.dragList[e.key] = e;
             tempDragEle.isDragging = false;
+            tempDragEle.transform = 'translate(' + tempDragEle.x + 'px' + ',' + tempDragEle.y + 'px)';
             tempDragEle.draggable ? (tempDragEle.zIndex = 9999, tempDragEle.cursor = "pointer") : tempDragEle.zIndex = 999;
         });
         _this2.handleMouseDown = _this2.handleMouseDown.bind(_this2);
@@ -71,7 +72,7 @@ var DragMe = function (_React$Component) {
             if (x >= areaWidth - dragElementWidth) {
                 x = areaWidth - dragElementWidth;
             }
-            if (y > areaHeight - dragElementHeight) {
+            if (y >= areaHeight - dragElementHeight) {
                 y = areaHeight - dragElementHeight;
             }
             return { validX: x, validY: y };
@@ -79,7 +80,6 @@ var DragMe = function (_React$Component) {
     }, {
         key: 'handleMouseDown',
         value: function handleMouseDown(event, key) {
-
             for (var i in this.state.dragList) {
                 this.state.dragList[i].draggable ? this.state.dragList[i].zIndex = 9999 : null;
             }
@@ -106,10 +106,12 @@ var DragMe = function (_React$Component) {
                     validX = _getValidCoordinate.validX,
                     validY = _getValidCoordinate.validY;
 
+                console.log('validX: ' + validX);
                 this.state.dragList[key] = Object.assign(this.state.dragList[key], {
                     isDragging: true,
                     x: validX + 'px',
-                    y: validY + 'px'
+                    y: validY + 'px' //,
+                    //transform: 'translate(' + validX + 'px' + ',' + validY + 'px)'
                 });
                 this.setState({
                     dragList: this.state.dragList

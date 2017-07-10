@@ -14,6 +14,8 @@ export default class DragCore extends React.Component {
                 {
                     React.Children.map(this.props.children, child => {
                         let childProps = child.props;
+                        // console.log('***************************')
+                        // console.log(childProps)
                         if(childProps.dragInfo.draggable) {
                             return  <div className="draggable"
                                     style={{
@@ -21,7 +23,8 @@ export default class DragCore extends React.Component {
                                         left: childProps.dragInfo.x,
                                         top: childProps.dragInfo.y,
                                         zIndex: childProps.dragInfo.zIndex,
-                                        cursor: childProps.dragInfo.cursor
+                                        cursor: childProps.dragInfo.cursor,
+                                        //transform: childProps.dragInfo.transform
                                     }}
                                     onMouseDown={(e,key)=>childProps.handleMouseDown(e,childProps.dragInfo.key)}
                                     onMouseMove={(e,key)=>childProps.handleMouseMove(e,childProps.dragInfo.key)}
@@ -36,6 +39,7 @@ export default class DragCore extends React.Component {
                                         position: "absolute", 
                                         left: childProps.dragInfo.x,
                                         top: childProps.dragInfo.y,
+                                        //transform: childProps.dragInfo.transform,
                                         zIndex: childProps.dragInfo.zIndex
                                     }}
                                 >

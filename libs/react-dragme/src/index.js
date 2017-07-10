@@ -16,6 +16,7 @@ export default class DragMe extends React.Component {
         this.props.dragList.forEach(function(e){
             let tempDragEle = _this.state.dragList[e.key] = e;
             tempDragEle.isDragging = false;
+            tempDragEle.transform = 'translate(' + tempDragEle.x + 'px' + ',' + tempDragEle.y + 'px)'
             tempDragEle.draggable ? (tempDragEle.zIndex = 9999,tempDragEle.cursor = "pointer") : tempDragEle.zIndex = 999
         });
         this.handleMouseDown = this.handleMouseDown.bind(this);
@@ -41,14 +42,13 @@ export default class DragMe extends React.Component {
         if(x >= (areaWidth-dragElementWidth)) {
             x = (areaWidth-dragElementWidth)
         }
-        if(y > (areaHeight-dragElementHeight)) {
+        if(y >= (areaHeight-dragElementHeight)) {
             y = (areaHeight-dragElementHeight)
         }
         return { validX: x, validY: y }
     }
 
     handleMouseDown(event, key) { 
-       
         for(var i in this.state.dragList) {
             this.state.dragList[i].draggable ? this.state.dragList[i].zIndex = 9999 : null;
         }
@@ -69,12 +69,13 @@ export default class DragMe extends React.Component {
         if(this.state.dragList[key].isDragging){
             let currentX = event.clientX - this.state.dragList[key].oX;
             let currentY = event.clientY - this.state.dragList[key].oY;
-            let { validX, validY} = this.getValidCoordinate(event.currentTarget, currentX, currentY);
-
+            let { validX, validY } = this.getValidCoordinate(event.currentTarget, currentX, currentY);
+            console.log('validX: ' + validX);
             this.state.dragList[key]  = Object.assign(this.state.dragList[key], {
                 isDragging: true,
                 x: validX + 'px',
-                y: validY + 'px'
+                y: validY + 'px'//,
+                //transform: 'translate(' + validX + 'px' + ',' + validY + 'px)'
             })
             this.setState({
                 dragList: this.state.dragList
@@ -92,7 +93,7 @@ export default class DragMe extends React.Component {
     }
 
     handleMouseLeave(event, key) { 
-        this.state.dragList[key]  = Object.assign(this.state.dragList[key], {
+        this.state.dragList[key] = Object.assign(this.state.dragList[key], {
             isDragging: false
         })
         this.setState({

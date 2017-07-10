@@ -37,6 +37,8 @@ var DragCore = function (_React$Component) {
                 },
                 _react2.default.Children.map(this.props.children, function (child) {
                     var childProps = child.props;
+                    // console.log('***************************')
+                    // console.log(childProps)
                     if (childProps.dragInfo.draggable) {
                         return _react2.default.createElement(
                             "div",
@@ -47,6 +49,7 @@ var DragCore = function (_React$Component) {
                                     top: childProps.dragInfo.y,
                                     zIndex: childProps.dragInfo.zIndex,
                                     cursor: childProps.dragInfo.cursor
+                                    //transform: childProps.dragInfo.transform
                                 },
                                 onMouseDown: function onMouseDown(e, key) {
                                     return childProps.handleMouseDown(e, childProps.dragInfo.key);
@@ -71,6 +74,7 @@ var DragCore = function (_React$Component) {
                                     position: "absolute",
                                     left: childProps.dragInfo.x,
                                     top: childProps.dragInfo.y,
+                                    //transform: childProps.dragInfo.transform,
                                     zIndex: childProps.dragInfo.zIndex
                                 }
                             },
