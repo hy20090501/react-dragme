@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for react-dragme\src\index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">react-dragme/src/</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.5% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>30/48</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">43.75% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>7/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.89% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.5% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>30/48</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from 'react';
+import DragCore from './core.js';
+&nbsp;
+export default class DragMe extends React.Component {
+   
+    constructor(props) { 
+        super(props);  
+        this.state = { 
+            dragList: {},
+            dragContainerStyle : {
+                minHeight: this.props.minHeight,
+                height: this.props.height
+            }
+        }; 
+        let _this = this;
+        this.props.dragList.forEach(function(e){
+            let tempDragEle = _this.state.dragList[e.key] = e;
+            tempDragEle.isDragging = false;
+            tempDragEle.transform = 'translate(' + tempDragEle.x + 'px' + ',' + tempDragEle.y + 'px)'
+            tempDragEle.draggable ? (tempDragEle.zIndex = 9999,tempDragEle.cursor = "pointer") : tempDragEle.zIndex = 999
+        });
+        this.handleMouseDown = this.handleMouseDown.bind(this);
+        this.handleMouseMove = this.handleMouseMove.bind(this);
+        this.handleMouseUp = this.handleMouseUp.bind(this);
+        this.handleMouseLeave = this.handleMouseLeave.bind(this);
+    } 
+&nbsp;
+    //限制可拖拽边界,返回有效坐标
+    getValidCoordinate(target, x, y) <span class="fstat-no" title="function not covered" >{</span>
+        //边界宽度和高度
+        let areaWidth = <span class="cstat-no" title="statement not covered" >target.parentNode.clientWidth;</span>
+        let areaHeight = <span class="cstat-no" title="statement not covered" >target.parentNode.clientHeight;</span>
+        //拖曳元素宽度和高度
+        let dragElementWidth = <span class="cstat-no" title="statement not covered" >target.clientWidth;</span>
+        let dragElementHeight = <span class="cstat-no" title="statement not covered" >target.clientHeight;</span>
+<span class="cstat-no" title="statement not covered" >        if(x &lt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >            x = 0</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if(y &lt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >            y = 0;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if(x &gt;= (areaWidth-dragElementWidth)) {</span>
+<span class="cstat-no" title="statement not covered" >            x = (areaWidth-dragElementWidth)</span>
+        }
+<span class="cstat-no" title="statement not covered" >        if(y &gt;= (areaHeight-dragElementHeight)) {</span>
+<span class="cstat-no" title="statement not covered" >            y = (areaHeight-dragElementHeight)</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return { validX: x, validY: y }</span>
+    }
+&nbsp;
+    handleMouseDown(event, key) { 
+        for(var i in this.state.dragList) {
+            this.state.dragList[i].draggable ? this.state.dragList[i].zIndex = 9999 : null;
+        }
+        this.state.dragList[key]  = Object.assign(this.state.dragList[key], {
+            position: "absolute",
+            isDragging: true,
+            //记录鼠标按下时鼠标点击位置距离拖动元素左侧和顶部边框的距离
+            oX: event.clientX - event.currentTarget.offsetLeft,
+            oY: event.clientY - event.currentTarget.offsetTop,
+            //oldX: event.clientX,
+            //oldY: event.clientY,
+            zIndex: 999999
+        })
+        this.setState({
+            dragList: this.state.dragList
+        })
+    }
+&nbsp;
+    handleMouseMove(event, key) { 
+        <span class="missing-if-branch" title="if path not taken" >I</span>if(this.state.dragList[key].isDragging){
+            let currentX = <span class="cstat-no" title="statement not covered" >event.clientX - this.state.dragList[key].oX;</span>
+            let currentY = <span class="cstat-no" title="statement not covered" >event.clientY - this.state.dragList[key].oY;</span>
+            let { validX, validY } = <span class="cstat-no" title="statement not covered" >this.getValidCoordinate(event.currentTarget, currentX, currentY);</span>
+<span class="cstat-no" title="statement not covered" >            this.state.dragList[key]  = Object.assign(this.state.dragList[key], {</span>
+                isDragging: true,
+                x: validX + 'px',
+                y: validY + 'px'//,
+                //transform: 'translate(' + (event.clientX-this.state.dragList[key].oldX) + 'px' + ',' + (event.clientY-this.state.dragList[key].oldY) + 'px)',
+                //oldX: event.clientX,
+                //oldY: event.clientY
+            })
+<span class="cstat-no" title="statement not covered" >            this.setState({</span>
+                dragList: this.state.dragList
+            })
+        }
+    }
+&nbsp;
+    handleMouseUp(event, key) { 
+        this.state.dragList[key]  = Object.assign(this.state.dragList[key], {
+            isDragging: false
+        })
+        this.setState({
+            dragList: this.state.dragList
+        })
+    }
+&nbsp;
+    handleMouseLeave(event, key) { 
+        this.state.dragList[key] = Object.assign(this.state.dragList[key], {
+            isDragging: false
+        })
+        this.setState({
+            dragList: this.state.dragList
+        })
+    }
+&nbsp;
+    render() {
+        return (
+                &lt;DragCore dragContainerStyle={ this.state.dragContainerStyle }&gt;
+                    {
+                        React.Children.map(this.props.children, (child,index) =&gt; {
+                            let draggable = this.state.dragList[index+1 +""].draggable;
+                            let cloneAddProps = null;
+                            if(draggable) {
+                                cloneAddProps = {
+                                    //把父组件的props.name赋值给每个子组件
+                                    // name: props.name
+                                    dragInfo: this.state.dragList[index+1+""],
+                                    handleMouseDown: this.handleMouseDown,
+                                    handleMouseMove: this.handleMouseMove,
+                                    handleMouseUp: this.handleMouseUp,
+                                    handleMouseLeave: this.handleMouseLeave
+                                }
+                            } else {
+                                cloneAddProps = {
+                                    dragInfo: this.state.dragList[index+1+""],
+                                }
+                            }
+                            return React.cloneElement(child, cloneAddProps)
+                        })
+                    }
+                &lt;/DragCore&gt;
+        );
+    }
+}
+DragMe.propTypes = { 
+    dragList: React.PropTypes.array,
+    minHeight: React.PropTypes.string,
+    height: React.PropTypes.string,
+}; 
+DragMe.defaultProps = { 
+    dragList: [],
+    minHeight: "600px",
+    height: "600px",
+};</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Jul 24 2017 11:43:21 GMT+0800 (中国标准时间)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
