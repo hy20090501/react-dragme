@@ -1,4 +1,4 @@
-# a drag conponent about react 
+# a react conponent
 react-dragme, a react component suportting target being dragged
 
 
