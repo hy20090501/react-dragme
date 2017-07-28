@@ -1,8 +1,12 @@
 # a drag conponent about react 
+react-dragme, a react component suportting target being dragged
 
-react 拖曳组件
 
-## 准备工作
+## How to use
+https://github.com/hy20090501/react-dragme/tree/master/libs/react-dragme
+
+
+## a example using react-dragme
 
 - 安装
 cnpm install
@@ -12,5 +16,9 @@ cnpm run dev
 
 - 访问
 http://localhost:8080/
+
+
+
+
 
   
